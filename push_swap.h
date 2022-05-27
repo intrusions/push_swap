@@ -6,7 +6,7 @@
 /*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 20:40:37 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/28 00:37:52 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/05/28 01:08:09 by jucheval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,12 @@ void	ft_print_stack(int *stack, int len);
 void    ft_swap_sa_sb(int *stack, int len, int what_stack);
 void    ft_swap_ss(int *stack_a, int *stack_b, int len_a, int len_b);
 void    ft_push_pa(t_data *data);
+void    ft_push_pb(t_data *data);
 
 //utils operation
 int		ft_delete_top_pa(t_data *data);
 int		ft_add_top_pa(t_data *data);
+int		ft_delete_top_pb(t_data *data);
+int		ft_add_top_pb(t_data *data);
 
 #endif
