@@ -6,7 +6,7 @@
 /*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 18:04:11 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/28 01:07:20 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/05/28 01:09:26 by jucheval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ int	main(int argc, char **argv)
 	// ft_print_stack(data.stack_a, data.len_a);							// check the result with the A stack
 	// ft_print_stack(data.stack_b, data.len_b);							// check the result with the B stack
 
-	ft_push_pb(&data); 													// swap the first int in B stack to the first in A stack
-	ft_print_stack(data.stack_a, data.len_a);							// check the result with the A stack
-	ft_print_stack(data.stack_b, data.len_b);							// check the result with the B stack
+	// ft_push_pb(&data); 													// swap the first int in B stack to the first in A stack
+	// ft_print_stack(data.stack_a, data.len_a);							// check the result with the A stack
+	// ft_print_stack(data.stack_b, data.len_b);							// check the result with the B stack
 
 	
 }
