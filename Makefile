@@ -1,8 +1,8 @@
 
   
-SRCS		=	push_swap.c utils.c \
-				swap.c push_a.c push_b.c \
-				rotate.c \
+SRCS		=	push_swap.c utils.c 		\
+				swap.c push_a.c push_b.c 	\
+				rotate.c reverse_rotate.c 	\
 
 OBJS		=	$(SRCS:.c=.o)
 
