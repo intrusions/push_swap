@@ -3,70 +3,41 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 18:04:11 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/28 03:26:15 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/05/28 17:07:04 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+int	ft_prepare_stack(t_data *data, int argc, char **argv)
+{
+	if (argc == 1)
+		return (0);
+	data->len_a = argc - 1;
+	if (!ft_parsing(argv, data->len_a))
+		return (0);
+	data->stack_a = malloc(sizeof(int) * (data->len_a));
+	if (!data->stack_a)
+		return (0);
+	data->stack_b = malloc(sizeof(int) * (data->len_a));
+	if (!data->stack_b)
+		return (free(data->stack_a), 0);
+	ft_fill_stack(data->stack_a, data->len_a, argv);
+	if (!ft_check_duplicate_and_max(data->stack_a, data->len_a))
+		return (free(data->stack_a), free(data->stack_b), 0);
+	for (int i = 10, j = 0; i < 16; i++, j++) 									// fill a factice B stack for making my own test
+		data->stack_b[j] = i;
+	data->len_b = 6;
+	return (1);
+}
+
 int	main(int argc, char **argv)
 {
 	t_data	data;
-	
-	data.len_a = argc - 1;
-	if (argc == 1)
-		return (0);
-	data.stack_a = malloc(sizeof(int) * (data.len_a));							// malloc stack A with the lenght of argc - 1
-	if (!data.stack_a)
-		return (0);
-	data.stack_b = malloc(sizeof(int) * (data.len_a));							// malloc stack B with the same lenght of A
-	if (!data.stack_b)
-		return (0);
 
-	for (int i = 10, j = 0; i < 16; i++, j++)									// creat a factice B stack for making my own test
-		data.stack_b[j] = i;
-	data.len_b = 6;
-
-	
-	ft_fill_stack(data.stack_a, data.len_a, argv);								// fill A stack with argv input
-	ft_print_stack(data.stack_a, data.len_a);									// check A stack
-	ft_print_stack(data.stack_b, data.len_b);									// check B stack
-	
-	ft_swap_sa_sb(data.stack_a, data.len_a, _STACK_A, TRUE);					// swap the 2 first int in A stack
-	ft_swap_sa_sb(data.stack_b, data.len_b, _STACK_B, TRUE);					// swap the 2 first int in B stack
-	ft_print_stack(data.stack_a, data.len_a);									// check the result
-	ft_print_stack(data.stack_b, data.len_b);									// check the result
-
-	ft_swap_ss(&data);															// make a SA and SB at the same time
-	ft_print_stack(data.stack_a, data.len_a);									// check the result with the A stack
-	ft_print_stack(data.stack_b, data.len_b);									// check the result with the B stack
-	
-	ft_push_pa(&data); 															// swap the first int in B stack to the first in A stack
-	ft_print_stack(data.stack_a, data.len_a);									// check the result with the A stack
-	ft_print_stack(data.stack_b, data.len_b);									// check the result with the B stack
-
-	ft_push_pb(&data); 															// swap the first int in B stack to the first in A stack
-	ft_print_stack(data.stack_a, data.len_a);									// check the result with the A stack
-	ft_print_stack(data.stack_b, data.len_b);									// check the result with the B stack
-
-	ft_rotate_ra_rb(data.stack_a, data.len_a, _STACK_A, TRUE);					// shift up all elements of A stack. the first element becomes the last one
-	ft_rotate_ra_rb(data.stack_b, data.len_b, _STACK_B, TRUE);					// shift up all elements of B stack. the first element becomes the last one
-	ft_print_stack(data.stack_a, data.len_a);									// check the result with the A stack
-	ft_print_stack(data.stack_b, data.len_b);									// check the result with the B stack
-
-	ft_rotate_rr(&data);														// the first int become the last one, for A and B stack
-	ft_print_stack(data.stack_a, data.len_a);									// check the result with the A stack
-	ft_print_stack(data.stack_b, data.len_b);									// check the result with the B stack
-
-	ft_reverse_rotate_rra_rrb(data.stack_a, data.len_a, _STACK_A, TRUE);		// shift down all elements of A stack. the last element becomes the first
-	ft_reverse_rotate_rra_rrb(data.stack_b, data.len_b, _STACK_B, TRUE);		// shift down all elements of A stack. the last element becomes the first
-	ft_print_stack(data.stack_a, data.len_a);									// check the result with the A stack
-	ft_print_stack(data.stack_b, data.len_b);									// check the result with the B stack
-
-	ft_reverse_rotate_rrr(&data);												// shift down all elements of A and B stack
-	ft_print_stack(data.stack_a, data.len_a);									// check the result with the A stack
-	ft_print_stack(data.stack_b, data.len_b);									// check the result with the B stack
+	if (!ft_prepare_stack(&data, argc, argv))
+		return (ft_error());
 }

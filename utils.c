@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 20:50:43 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/27 23:44:36 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/05/28 16:52:33 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		if (r * neg > 2147483647)
-			return (-1);
+			return (0);
 		else if (r * neg < -2147483648)
 			return (0);
 		r = r * 10 + (str[i] - 48);
@@ -67,4 +67,10 @@ void	ft_fill_stack(int *stack, int len, char **argv)
 		stack[i] = ft_atoi(argv[i + 1]);
 		i++;
 	}
+}
+
+int	ft_error(void)
+{
+	ft_putstr("Error\n");
+	return (0);
 }

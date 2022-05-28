@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 20:40:37 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/28 03:22:07 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/05/28 16:52:43 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,11 @@ int     ft_atoi(const char *str);
 void	ft_putstr(char *str);
 void	ft_fill_stack(int *stack, int len, char **argv);
 void	ft_print_stack(int *stack, int len);
+int		ft_error(void);
+//parsing
+int 	ft_parsing(char **argv, int len);
+int		ft_isdigit(char c);
+int		ft_check_duplicate_and_max(int *stack, int len);
 
 //operations
 void    ft_swap_sa_sb(int *stack, int len, int what_stack, int print);

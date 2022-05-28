@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_a.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 01:12:29 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/28 01:15:19 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/05/28 17:05:56 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_add_top_pa(t_data *data)
 	if (!new_stack)
 		return (0);
 	new_stack[0] = data->stack_b[0];
-	while (i <= data->len_a)
+	while (i < data->len_a)
 	{
 		new_stack[i + 1] = data->stack_a[i];
 		i++;

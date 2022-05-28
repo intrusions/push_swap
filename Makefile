@@ -3,6 +3,7 @@
 SRCS		=	push_swap.c utils.c 		\
 				swap.c push_a.c push_b.c 	\
 				rotate.c reverse_rotate.c 	\
+				parsing.c \
 
 OBJS		=	$(SRCS:.c=.o)
 
