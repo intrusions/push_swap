@@ -6,7 +6,7 @@
 /*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 01:10:42 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/28 02:26:40 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/05/28 03:23:24 by jucheval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,18 @@ void    ft_swap(int *a, int *b)
     *b = tmp;
 }
 
-void    ft_swap_sa_sb(int *stack, int len, int what_stack)
+void    ft_swap_sa_sb(int *stack, int len, int what_stack, int print)
 {
 	if (len <= 1)
 		return ;
     ft_swap(&stack[0], &stack[1]);
-	if (what_stack == _STACK_A)
-		ft_putstr("sa\n");
-	else if (what_stack == _STACK_B)
-		ft_putstr("sb\n");
+    if (print == TRUE)
+    {
+	    if (what_stack == _STACK_A)
+	    	ft_putstr("sa\n");
+	    else if (what_stack == _STACK_B)
+	    	ft_putstr("sb\n");
+    }
 }
 
 void    ft_swap_ss(t_data *data)

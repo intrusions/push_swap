@@ -6,7 +6,7 @@
 /*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 20:40:37 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/28 03:04:29 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/05/28 03:22:07 by jucheval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <stdlib.h>
 # define _STACK_A 1
 # define _STACK_B 0
+# define TRUE 1
+# define FALSE 0
 
 //struct
 typedef struct s_data
@@ -35,13 +37,13 @@ void	ft_fill_stack(int *stack, int len, char **argv);
 void	ft_print_stack(int *stack, int len);
 
 //operations
-void    ft_swap_sa_sb(int *stack, int len, int what_stack);
+void    ft_swap_sa_sb(int *stack, int len, int what_stack, int print);
 void    ft_swap_ss(t_data *data);
 void    ft_push_pa(t_data *data);
 void    ft_push_pb(t_data *data);
-void 	ft_rotate_ra_rb(int *stack, int len, int what_stack);
+void 	ft_rotate_ra_rb(int *stack, int len, int what_stack, int print);
 void	ft_rotate_rr(t_data *data);
-void    ft_reverse_rotate_rra_rrb(int *stack, int len, int what_stack);
+void    ft_reverse_rotate_rra_rrb(int *stack, int len, int what_stack, int print);
 void    ft_reverse_rotate_rrr(t_data *data);
 
 //utils operation
