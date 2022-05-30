@@ -43,7 +43,7 @@ void	ft_sort_small_stack(t_data *data)
 	(void)data;
 }
 
-void	ft_sort_big_stack(t_data *data)
+int	ft_sort_big_stack(t_data *data)
 {
 	int	j;
 	int	size;
@@ -63,13 +63,15 @@ void	ft_sort_big_stack(t_data *data)
 			if ((data->stack_a[0] >> to_max_bits) & (1 == 1))
 				ft_rotate_ra_rb(data->stack_a, data->len_a, _STACK_A, TRUE);
 			else
-				ft_push_pb(data);
+				if (!ft_push_pb(data))
+					return (0);
 			j++;
 		}
 		while (data->len_b)
 			ft_push_pa(data);
 		to_max_bits++;
 	}
+	return (1);
 }
 
 int ft_sort(t_data *data)
@@ -80,7 +82,7 @@ int ft_sort(t_data *data)
 	if (data->len_a <= 5)
 		ft_sort_small_stack(data);
 	else
-		ft_sort_big_stack(data);
-	ft_print_stack(data->stack_a, data->len_a);
-	return (0);
+		if (!ft_sort_big_stack(data))
+			return (0);
+	return (1);
 }

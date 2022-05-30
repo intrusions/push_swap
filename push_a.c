@@ -6,7 +6,7 @@
 /*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 01:12:29 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/28 17:05:56 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/30 05:35:30 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,14 @@ int	ft_delete_top_pa(t_data *data)
 	return (1);
 }
 
-void    ft_push_pa(t_data *data)
+int    ft_push_pa(t_data *data)
 {
 	if (!data->len_b)
-		return ;
-	ft_add_top_pa(data);
-	ft_delete_top_pa(data);
+		return (1);
+	if (!ft_add_top_pa(data))
+		return (0);
+	if (!ft_delete_top_pa(data))
+		return (0);
 	ft_putstr("pa\n");
+	return (1);
 }
