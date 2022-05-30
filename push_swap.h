@@ -6,7 +6,7 @@
 /*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 20:40:37 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/30 01:50:16 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/30 04:34:06 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,5 @@ void    ft_replace_per_index(int *stack, int len);
 void	ft_sort_big_stack(t_data *data);
 void	ft_sort_small_stack(t_data *data);
 
-//utils algorythm
-int		ft_len_lumber(int size);
 
 #endif

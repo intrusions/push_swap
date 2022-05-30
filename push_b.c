@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_b.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 01:13:00 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/28 01:15:25 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/05/30 05:10:36 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,10 @@ int	ft_add_top_pb(t_data *data)
 		new_stack[i + 1] = data->stack_b[i];
 		i++;
 	}
-	free(data->stack_b);
+	free(data->stack_b); // double free or corruption pour un 9
 	data->stack_b = new_stack;
 	data->len_b++;
+
 	return (1);	
 }
 

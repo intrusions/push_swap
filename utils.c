@@ -6,7 +6,7 @@
 /*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 20:50:43 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/30 01:50:51 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/30 04:34:11 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,17 +69,4 @@ void	ft_init_struct(t_data *data)
 	data->stack_b = NULL;
 	data->len_a = 0;
 	data->len_b = 0;
-}
-
-int	ft_len_lumber(int size)
-{
-	int	count;
-
-	count = 0;
-	while (size > 0)
-	{
-		count++;
-		size /= 10;
-	}
-	return (count);
 }
