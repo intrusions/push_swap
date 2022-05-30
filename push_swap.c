@@ -6,7 +6,7 @@
 /*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 18:04:11 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/28 17:07:04 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/28 17:43:10 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,6 @@ int	ft_prepare_stack(t_data *data, int argc, char **argv)
 	ft_fill_stack(data->stack_a, data->len_a, argv);
 	if (!ft_check_duplicate_and_max(data->stack_a, data->len_a))
 		return (free(data->stack_a), free(data->stack_b), 0);
-	for (int i = 10, j = 0; i < 16; i++, j++) 									// fill a factice B stack for making my own test
-		data->stack_b[j] = i;
-	data->len_b = 6;
 	return (1);
 }
 
@@ -38,6 +35,8 @@ int	main(int argc, char **argv)
 {
 	t_data	data;
 
+	ft_init_struct(&data);
 	if (!ft_prepare_stack(&data, argc, argv))
 		return (ft_error());
+	ft_sort(&data);
 }

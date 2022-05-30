@@ -6,7 +6,7 @@
 /*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 03:27:30 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/28 16:47:21 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/28 17:14:15 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,16 @@ int	ft_check_duplicate_and_max(int *stack, int len)
 		i++;
 	}
 	return (1);
+}
+
+void	ft_fill_stack(int *stack, int len, char **argv)
+{
+	int	i;
+
+	i = 0;
+	while (i < len)
+	{
+		stack[i] = ft_atoi(argv[i + 1]);
+		i++;
+	}
 }

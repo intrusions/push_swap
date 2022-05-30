@@ -6,7 +6,7 @@
 /*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 20:50:43 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/28 16:52:33 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/30 01:50:51 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,20 +57,29 @@ void	ft_print_stack(int *stack, int len)
 	printf("----------\n");
 }
 
-void	ft_fill_stack(int *stack, int len, char **argv)
-{
-	int	i;
-
-	i = 0;
-	while (i < len)
-	{
-		stack[i] = ft_atoi(argv[i + 1]);
-		i++;
-	}
-}
-
 int	ft_error(void)
 {
 	ft_putstr("Error\n");
 	return (0);
+}
+
+void	ft_init_struct(t_data *data)
+{
+	data->stack_a = NULL;
+	data->stack_b = NULL;
+	data->len_a = 0;
+	data->len_b = 0;
+}
+
+int	ft_len_lumber(int size)
+{
+	int	count;
+
+	count = 0;
+	while (size > 0)
+	{
+		count++;
+		size /= 10;
+	}
+	return (count);
 }

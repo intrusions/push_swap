@@ -23,7 +23,7 @@
 	ft_print_stack(data.stack_a, data.len_a);									// check the result with the A stack
 	ft_print_stack(data.stack_b, data.len_b);									// check the result with the B stack
 
-	ft_push_pb(&data); 															// swap the first int in B stack to the first in A stack
+	ft_push_pb(&data); 															// swap the first int in A stack to the first in B stack
 	ft_print_stack(data.stack_a, data.len_a);									// check the result with the A stack
 	ft_print_stack(data.stack_b, data.len_b);									// check the result with the B stack
 
@@ -44,3 +44,7 @@
 	ft_reverse_rotate_rrr(&data);												// shift down all elements of A and B stack
 	ft_print_stack(data.stack_a, data.len_a);									// check the result with the A stack
 	ft_print_stack(data.stack_b, data.len_b);									// check the result with the B stack
+
+	for (int i = 10, j = 0; i < 16; i++, j++) 									// fill a factice B stack for making my own test
+		data->stack_b[j] = i;
+	data->len_b = 6;
