@@ -6,7 +6,7 @@
 /*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 01:13:00 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/30 05:10:36 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/30 05:20:57 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,14 @@ int	ft_add_top_pb(t_data *data)
 	if (!new_stack)
 		return (0);
 	new_stack[0] = data->stack_a[0];
-	while (i <= data->len_b)
+	while (i < data->len_b)
 	{
 		new_stack[i + 1] = data->stack_b[i];
 		i++;
 	}
-	free(data->stack_b); // double free or corruption pour un 9
+	free(data->stack_b);
 	data->stack_b = new_stack;
 	data->len_b++;
-
 	return (1);	
 }
 

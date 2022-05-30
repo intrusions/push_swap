@@ -60,7 +60,6 @@ void	ft_sort_big_stack(t_data *data)
 		j = 0;
 		while (j <= size)
 		{
-			printf("j : [%d] | to_max_bits : [%d] | stack[0] = [%d]\n", j, to_max_bits, data->stack_a[0]);
 			if ((data->stack_a[0] >> to_max_bits) & (1 == 1))
 				ft_rotate_ra_rb(data->stack_a, data->len_a, _STACK_A, TRUE);
 			else
@@ -69,8 +68,6 @@ void	ft_sort_big_stack(t_data *data)
 		}
 		while (data->len_b)
 			ft_push_pa(data);
-		ft_print_stack(data->stack_a, data->len_a);
-		ft_print_stack(data->stack_b, data->len_b);
 		to_max_bits++;
 	}
 }
@@ -85,6 +82,5 @@ int ft_sort(t_data *data)
 	else
 		ft_sort_big_stack(data);
 	ft_print_stack(data->stack_a, data->len_a);
-	ft_print_stack(data->stack_b, data->len_b);
 	return (0);
 }

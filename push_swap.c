@@ -6,7 +6,7 @@
 /*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 18:04:11 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/28 17:43:10 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/30 05:15:30 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,6 @@ int	main(int argc, char **argv)
 	if (!ft_prepare_stack(&data, argc, argv))
 		return (ft_error());
 	ft_sort(&data);
+	free(data.stack_a);
+	free(data.stack_b);
 }
