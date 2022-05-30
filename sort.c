@@ -12,35 +12,46 @@
 
 #include "push_swap.h"
 
-int	ft_is_sorted(int *stack, int len)
+void	ft_sort_for_index(int **new_stack, int len)
 {
+	int	*tmp;
 	int	i;
 	int	j;
 
-	i = 0;
-	while (i < len)
+	i = -1;
+	while (++i < len)
 	{
 		j = i + 1;
 		while (j < len)
 		{
-			if (stack[i] > stack[j])
-				return (0);
+			if (*new_stack[i] > *new_stack[j])
+			{
+				tmp = new_stack[i];
+				new_stack[i] = new_stack[j];
+				new_stack[j] = tmp;
+			}
 			j++;
 		}
-		i++;
 	}
+}
+
+int	ft_replace_per_index(int *stack, int len)
+{
+	int		**new_stack;
+	int		i;
+
+	i = -1;
+	new_stack = malloc(sizeof(int *) * len);
+	if (!new_stack)
+		return (0);
+	while (++i < len)
+		new_stack[i] = &stack[i];
+	ft_sort_for_index(new_stack, len);
+	i = -1;
+	while (++i < len)
+		*new_stack[i] = i;
+	free(new_stack);
 	return (1);
-}
-
-void	ft_replace_per_index(int *stack, int len)
-{
-	(void)stack;
-	(void)len;
-}
-
-void	ft_sort_small_stack(t_data *data)
-{
-	(void)data;
 }
 
 int	ft_sort_big_stack(t_data *data)

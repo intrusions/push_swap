@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 20:40:37 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/30 06:07:36 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/30 20:07:08 by jucheval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	ft_fill_stack(int *stack, int len, char **argv);
 void	ft_print_stack(int *stack, int len);
 int		ft_error(void);
 void	ft_init_struct(t_data *data);
+int		ft_prepare_stack(t_data *data, int argc, char **argv);
 
 //parsing
 int		ft_parsing(char **argv, int len);
@@ -62,8 +63,9 @@ int		ft_add_top_pb(t_data *data);
 //algorythm
 int		ft_sort(t_data *data);
 int		ft_is_sorted(int *stack, int len);
-void	ft_replace_per_index(int *stack, int len);
+int		ft_replace_per_index(int *stack, int len);
 int		ft_sort_big_stack(t_data *data);
 void	ft_sort_small_stack(t_data *data);
+void	ft_sort_for_index(int **new_stack, int len);
 
 #endif

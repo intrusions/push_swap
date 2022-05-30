@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 18:04:11 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/30 06:19:56 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/30 20:26:27 by jucheval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,5 @@ int	main(int argc, char **argv)
 	if (!ft_prepare_stack(&data, argc, argv))
 		return (ft_error());
 	ft_sort(&data);
-	ft_print_stack(data.stack_a, data.len_a);
 	return (free(data.stack_a), free(data.stack_b), 0);
 }
