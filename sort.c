@@ -52,10 +52,10 @@ int	ft_sort_big_stack(t_data *data)
 
 	max_bits = 0;
 	size = data->len_a - 1;
-	to_max_bits = 0;
+	to_max_bits = -1;
 	while (data->len_a >> max_bits != 0)
 		max_bits++;
-	while (to_max_bits < max_bits)
+	while (++to_max_bits < max_bits)
 	{
 		j = -1;
 		while (++j <= size)
@@ -68,7 +68,6 @@ int	ft_sort_big_stack(t_data *data)
 		}
 		while (data->len_b)
 			ft_push_pa(data);
-		to_max_bits++;
 	}
 	return (1);
 }
