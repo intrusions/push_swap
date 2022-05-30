@@ -6,7 +6,7 @@
 /*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 01:12:29 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/30 05:35:30 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/30 06:04:09 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_add_top_pa(t_data *data)
 {
 	int		*new_stack;
 	int		i;
-	
+
 	i = 0;
 	new_stack = malloc(sizeof(int) * (data->len_a + 1));
 	if (!new_stack)
@@ -30,7 +30,7 @@ int	ft_add_top_pa(t_data *data)
 	free(data->stack_a);
 	data->stack_a = new_stack;
 	data->len_a++;
-	return (1);	
+	return (1);
 }
 
 int	ft_delete_top_pa(t_data *data)
@@ -53,7 +53,7 @@ int	ft_delete_top_pa(t_data *data)
 	return (1);
 }
 
-int    ft_push_pa(t_data *data)
+int	ft_push_pa(t_data *data)
 {
 	if (!data->len_b)
 		return (1);

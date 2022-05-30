@@ -6,7 +6,7 @@
 /*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 03:27:30 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/28 17:14:15 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/30 06:03:39 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 int	ft_isdigit(char c)
 {
-	if ((c >= '0' && c <= '9') )
+	if ((c >= '0' && c <= '9'))
 		return (1);
 	return (0);
 }
 
-int ft_parsing(char **argv, int len)
+int	ft_parsing(char **argv, int len)
 {
 	int	i;
 	int	j;
-	
+
 	i = 1;
 	while (i <= len)
 	{

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 02:01:14 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/28 03:20:46 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/05/30 06:10:02 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void ft_rotate_ra_rb(int *stack, int len, int what_stack, int print)
+void	ft_rotate_ra_rb(int *stack, int len, int what_stack, int print)
 {
 	int	i;
 	int	tmp;

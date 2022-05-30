@@ -6,7 +6,7 @@
 /*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 20:50:43 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/30 04:34:11 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/30 06:15:48 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,10 @@ void	ft_putstr(char *str)
 
 void	ft_print_stack(int *stack, int len)
 {
-	for(int i = 0; i < len; i++)
+	int	i;
+
+	i = -1;
+	while (++i < len)
 		printf("%d\n", stack[i]);
 	printf("----------\n");
 }
