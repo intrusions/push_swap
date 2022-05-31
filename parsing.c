@@ -6,7 +6,7 @@
 /*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 03:27:30 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/30 06:03:39 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/31 21:38:00 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,31 @@ int	ft_parsing(char **argv, int len)
 		}
 		i++;
 	}
+	if (!ft_check_int_max(len, argv))
+		return (0);
 	return (1);
 }
 
-int	ft_check_duplicate_and_max(int *stack, int len)
+int	ft_check_int_max(int len, char **argv)
+{
+	long long int	*stack;
+	int				i;
+
+	i = 0;
+	stack = malloc(sizeof(long long int) * len);
+	if (!stack)
+		return (0);
+	while (i < len)
+	{
+		stack[i] = ft_atoi(argv[i + 1]);
+		if (stack[i] > 2147483647 || stack[i] < -2147483648)
+			return (free(stack), 0);
+		i++;
+	}
+	return (free(stack), 1);
+}
+
+int	ft_check_duplicate(int *stack, int len)
 {
 	int	i;
 	int	j;
