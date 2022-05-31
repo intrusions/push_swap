@@ -6,7 +6,7 @@
 /*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 02:43:05 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/30 06:09:32 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/31 19:06:16 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_reverse_rra_rrb(int *stack, int len, int what_stack, int print)
 
 	i = len - 1;
 	tmp = stack[len - 1];
-	while (i >= 0)
+	while (i > 0)
 	{
 		stack[i] = stack[i - 1];
 		i--;
