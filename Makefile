@@ -3,8 +3,8 @@
 SRCS		=	push_swap.c utils.c 		\
 				swap.c push_a.c push_b.c 	\
 				rotate.c reverse_rotate.c 	\
-				parsing.c sort.c utils_sort.c \
-				small_stack.c
+				parsing.c sort.c utils2.c \
+				small_stack.c ft_split.c
 
 OBJS		=	$(SRCS:.c=.o)
 
@@ -20,6 +20,7 @@ all:		$(NAME)
 
 $(NAME):	$(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	rm -rf *.o
 
 clean:
 	$(RM) $(OBJS) $(BONUS_OBJS)

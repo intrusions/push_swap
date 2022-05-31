@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_sort.c                                       :+:      :+:    :+:   */
+/*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 19:57:25 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/30 20:26:43 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/05/31 01:25:23 by jucheval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,27 @@ int	ft_is_sorted(int *stack, int len)
 		i++;
 	}
 	return (1);
+}
+
+int	ft_count_tab(char **argv)
+{
+	int	i;
+
+	i = 0;
+	while (argv[i])
+		i++;
+	return (i);
+}
+
+void	ft_free_split(char **argv, int argc)
+{
+	int	i;
+
+	i = 1;
+	while (i < argc)
+	{
+		free(argv[i]);
+		i++;
+	}
+	free(argv);
 }

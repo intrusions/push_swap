@@ -6,7 +6,7 @@
 /*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 20:40:37 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/30 20:07:08 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/05/31 02:12:15 by jucheval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,15 @@ void	ft_fill_stack(int *stack, int len, char **argv);
 void	ft_print_stack(int *stack, int len);
 int		ft_error(void);
 void	ft_init_struct(t_data *data);
-int		ft_prepare_stack(t_data *data, int argc, char **argv);
+int		ft_prepare_stack(t_data *data, int argc, char **argv, int prepare);
+void	ft_free_split(char **argv, int argc);
+int		ft_count_tab(char **argv);
 
 //parsing
 int		ft_parsing(char **argv, int len);
 int		ft_isdigit(char c);
 int		ft_check_duplicate_and_max(int *stack, int len);
+char	**ft_split(char const *str, char c);
 
 //operations
 void	ft_swap_sa_sb(int *stack, int len, int what_stack, int print);
