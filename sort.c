@@ -88,7 +88,15 @@ int	ft_sort(t_data *data)
 	if (ft_is_sorted(data->stack_a, data->len_a))
 		return (0);
 	ft_replace_per_index(data->stack_a, data->len_a);
-	if (!ft_sort_big_stack(data))
-		return (0);
+	if (data->len_a <= 5)
+	{
+		if (!ft_sort_small_stack(data))
+			return (0);
+	}
+	else
+	{
+		if (!ft_sort_big_stack(data))
+			return (0);
+	}
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 18:04:11 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/31 02:42:54 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/05/31 04:21:26 by jucheval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,14 @@ int	main(int argc, char **argv)
 	if (argc == 2)
 	{
 		argv = ft_split(argv[1], ' ');
+		if (!argv)
+			return (ft_error(), 0);
 		argc = ft_count_tab(argv);
 		params++;
 	}
 	if (!ft_prepare_stack(&data, argc, argv, params))
 		return (ft_error());
 	ft_sort(&data);
+	ft_print_stack(data.stack_a, data.len_a);
 	return (free(data.stack_a), free(data.stack_b), 0);
 }

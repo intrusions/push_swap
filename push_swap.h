@@ -6,7 +6,7 @@
 /*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 20:40:37 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/31 02:12:15 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/05/31 03:28:00 by jucheval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int		ft_sort(t_data *data);
 int		ft_is_sorted(int *stack, int len);
 int		ft_replace_per_index(int *stack, int len);
 int		ft_sort_big_stack(t_data *data);
-void	ft_sort_small_stack(t_data *data);
+int		ft_sort_small_stack(t_data *data);
 void	ft_sort_for_index(int **new_stack, int len);
 
 #endif

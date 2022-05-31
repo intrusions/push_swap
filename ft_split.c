@@ -6,7 +6,7 @@
 /*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 00:03:33 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/31 01:18:14 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/05/31 04:16:38 by jucheval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,10 +100,12 @@ char	**ft_split(char const *str, char c)
 	int		word;
 
 	word = ft_is_word(str, c) + 1;
+	if (word == 1)
+		return (0);
 	dest = malloc(sizeof(char *) * (word + 1));
-	dest[0] = "push_swap";
 	if (!dest)
 		return (0);
+	dest[0] = "push_swap";
 	dest = ft_malloc_word(str, c, dest, word);
 	if (!dest)
 		return (NULL);
