@@ -6,7 +6,7 @@
 /*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/28 01:12:29 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/30 06:04:09 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/31 19:17:03 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_delete_top_pa(t_data *data)
 	int		i;
 
 	i = 0;
-	new_stack = malloc(sizeof(int) * (data->len_b - 1));
+	new_stack = malloc(sizeof(int) * data->len_b);
 	if (!new_stack)
 		return (0);
 	while (i < (data->len_b - 1))
