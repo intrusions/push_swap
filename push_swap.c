@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 18:04:11 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/31 21:42:58 by xel              ###   ########.fr       */
+/*   Updated: 2022/06/01 17:43:52 by jucheval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ int	main(int argc, char **argv)
 	int		params;
 
 	params = 0;
+	if (argc == 1)
+		return (0);
 	ft_init_struct(&data);
 	if (argc == 2)
 	{
