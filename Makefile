@@ -4,7 +4,8 @@ SRCS		=	push_swap.c utils.c 		\
 				swap.c push_a.c push_b.c 	\
 				rotate.c reverse_rotate.c 	\
 				parsing.c sort.c utils2.c \
-				small_stack.c ft_split.c
+				small_stack.c ft_split.c \
+				sort_5.c
 
 OBJS		=	$(SRCS:.c=.o)
 

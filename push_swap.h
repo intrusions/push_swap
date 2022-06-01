@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 20:40:37 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/31 21:41:14 by xel              ###   ########.fr       */
+/*   Updated: 2022/06/01 17:03:15 by jucheval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,10 @@ int			ft_sort_small_stack(t_data *data);
 void		ft_sort_3(t_data *data);
 int			ft_sort_4(t_data *data);
 int			ft_sort_4_second(t_data *data);
+int			ft_sort_5(t_data *data);
+int			ft_sort_5_first(t_data *data);
+int			ft_sort_5_second(t_data *data);
+int			ft_sort_5_third(t_data *data);
+int			ft_sort_5_fourth(t_data *data);
 
 #endif
