@@ -6,7 +6,7 @@
 /*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 19:56:18 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/31 21:41:53 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/31 21:43:33 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,16 +79,15 @@ int	ft_sort_4(t_data *data)
 	return (1);
 }
 
-int	ft_sort_5(t_data *data)
-{
-	if (!ft_push_pb(data))
-		return (0);
-	if (!ft_push_pb(data))
-		return (0);
-	ft_sort_3(data);
-	ft_print_stack(data->stack_a, data->len_a);
-	return (1);
-}
+// int	ft_sort_5(t_data *data)
+// {
+// 	if (!ft_push_pb(data))
+// 		return (0);
+// 	if (!ft_push_pb(data))
+// 		return (0);
+// 	ft_sort_3(data);
+// 	return (1);
+// }
 
 int	ft_sort_small_stack(t_data *data)
 {
@@ -101,10 +100,10 @@ int	ft_sort_small_stack(t_data *data)
 		if (!ft_sort_4(data))
 			return (0);
 	}
-	else if (data->len_a == 5)
-	{
-		if (!ft_sort_5(data))
-			return (0);
-	}
+	// else if (data->len_a == 5)
+	// {
+	// 	if (!ft_sort_5(data))
+	// 		return (0);
+	// }
 	return (1);
 }

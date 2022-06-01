@@ -6,7 +6,7 @@
 /*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 18:04:11 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/31 21:38:32 by xel              ###   ########.fr       */
+/*   Updated: 2022/05/31 21:42:58 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ int	ft_prepare_stack(t_data *data, int argc, char **argv, int params)
 		ft_free_split(argv, argc);
 	if (!ft_check_duplicate(data->stack_a, data->len_a))
 		return (free(data->stack_a), free(data->stack_b), 0);
-	ft_print_stack(data->stack_a, data->len_a);
 	return (1);
 }
 
@@ -57,7 +56,6 @@ int	main(int argc, char **argv)
 	}
 	if (!ft_prepare_stack(&data, argc, argv, params))
 		return (ft_error());
-	ft_print_stack(data.stack_a, data.len_a);
 	ft_sort(&data);
 	return (free(data.stack_a), free(data.stack_b), 0);
 }
