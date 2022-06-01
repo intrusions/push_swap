@@ -21,7 +21,6 @@ all:		$(NAME)
 
 $(NAME):	$(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
-	rm -rf *.o
 
 clean:
 	$(RM) $(OBJS) $(BONUS_OBJS)

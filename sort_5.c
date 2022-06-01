@@ -6,7 +6,7 @@
 /*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 16:27:56 by jucheval          #+#    #+#             */
-/*   Updated: 2022/06/01 17:03:35 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/06/01 17:06:07 by jucheval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,5 @@ int	ft_sort_5(t_data *data)
 		return (0);
 	if (!ft_push_pa(data))
 		return (0);
-	ft_print_stack(data->stack_a, data->len_a);
 	return (1);
 }
