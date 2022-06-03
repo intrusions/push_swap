@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 20:50:43 by jucheval          #+#    #+#             */
-/*   Updated: 2022/05/31 21:39:03 by xel              ###   ########.fr       */
+/*   Updated: 2022/06/03 02:42:51 by jucheval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,16 +44,6 @@ void	ft_putstr(char *str)
 	i = -1;
 	while (str[++i])
 		write(1, &str[i], 1);
-}
-
-void	ft_print_stack(int *stack, int len)
-{
-	int	i;
-
-	i = -1;
-	while (++i < len)
-		printf("%d\n", stack[i]);
-	printf("----------\n");
 }
 
 int	ft_error(void)

@@ -6,7 +6,7 @@
 /*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 20:40:37 by jucheval          #+#    #+#             */
-/*   Updated: 2022/06/01 17:03:15 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/06/03 02:42:41 by jucheval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ typedef struct s_data
 long long	ft_atoi(const char *str);
 void		ft_putstr(char *str);
 void		ft_fill_stack(int *stack, int len, char **argv);
-void		ft_print_stack(int *stack, int len);
 int			ft_error(void);
 void		ft_init_struct(t_data *data);
 int			ft_prepare_stack(t_data *data, int argc, char **argv, int prepare);

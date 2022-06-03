@@ -78,7 +78,8 @@ int	ft_sort_big_stack(t_data *data)
 					return (0);
 		}
 		while (data->len_b)
-			ft_push_pa(data);
+			if(!ft_push_pa(data))
+				return (0);
 	}
 	return (1);
 }
