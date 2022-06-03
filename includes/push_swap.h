@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jucheval <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: xel <xel@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 20:40:37 by jucheval          #+#    #+#             */
-/*   Updated: 2022/06/03 02:42:41 by jucheval         ###   ########.fr       */
+/*   Updated: 2022/06/03 19:16:04 by xel              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ int			ft_is_sorted(int *stack, int len);
 int			ft_replace_per_index(int *stack, int len);
 int			ft_sort_big_stack(t_data *data);
 void		ft_sort_for_index(int **new_stack, int len);
+int			ft_get_max_bits(t_data *data);
 
 //algorythm small stack
 int			ft_sort_small_stack(t_data *data);

@@ -54,6 +54,16 @@ int	ft_replace_per_index(int *stack, int len)
 	return (1);
 }
 
+int	ft_get_max_bits(t_data *data)
+{
+	int	max_bits;
+
+	max_bits = 0;
+	while (data->len_a >> max_bits != 0)
+		max_bits++;
+	return (max_bits);
+}
+
 int	ft_sort_big_stack(t_data *data)
 {
 	int	j;
@@ -61,11 +71,9 @@ int	ft_sort_big_stack(t_data *data)
 	int	max_bits;
 	int	to_max_bits;
 
-	max_bits = 0;
+	max_bits = ft_get_max_bits(data);
 	size = data->len_a - 1;
 	to_max_bits = -1;
-	while (data->len_a >> max_bits != 0)
-		max_bits++;
 	while (++to_max_bits < max_bits)
 	{
 		j = -1;
@@ -78,7 +86,7 @@ int	ft_sort_big_stack(t_data *data)
 					return (0);
 		}
 		while (data->len_b)
-			if(!ft_push_pa(data))
+			if (!ft_push_pa(data))
 				return (0);
 	}
 	return (1);

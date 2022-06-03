@@ -1,11 +1,11 @@
 
   
-SRCS		=	push_swap.c utils.c 		\
-				swap.c push_a.c push_b.c 	\
-				rotate.c reverse_rotate.c 	\
-				parsing.c sort.c utils2.c \
-				small_stack.c ft_split.c \
-				sort_5.c
+SRCS		=	push_swap.c srcs/utils.c					\
+				srcs/swap.c srcs/push_a.c srcs/push_b.c		\
+				srcs/rotate.c srcs/reverse_rotate.c			\
+				srcs/parsing.c srcs/sort.c srcs/utils2.c	\
+				srcs/small_stack.c srcs/ft_split.c			\
+				srcs/sort_5.c
 
 OBJS		=	$(SRCS:.c=.o)
 
@@ -13,21 +13,23 @@ CC			=	gcc
 
 RM			=	rm -f
 
-CFLAGS		= 	-Wall -Wextra -Werror -g3 -I./includes
+CFLAGS		= 	-Wall -Wextra -Werror
+
+CPPFLAGS	=	-I./includes
 
 NAME		= 	push_swap
 
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) $(CPPFLAGS) $(OBJS) -o $(NAME)
 
 clean:
-	$(RM) $(OBJS) $(BONUS_OBJS)
+	$(RM) $(OBJS)
 
 fclean:		clean
 	$(RM) $(NAME)
 
 re:		fclean $(NAME)
 
-.PHONY:		all clean fclean re bonus
+.PHONY:		all clean fclean re
